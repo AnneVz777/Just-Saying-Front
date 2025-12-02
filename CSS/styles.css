@@ -1,0 +1,368 @@
+/* ---------------------------------------------------------------------- */
+/* --- SEÇÕES PRINCIPAIS E BOAS-VINDAS --- */
+/* ---------------------------------------------------------------------- */
+.boas-vindas {
+    text-align: center;
+    padding: 40px 20px;
+    color: #7b0b0b; 
+    border-radius: 10px;
+    margin: 20px auto;
+    font-size: 1.6rem;
+    font-weight: bold;
+    max-width: 800px;
+}
+
+.grade-cursos-ingles,
+.grade-cursos-espanhol {
+    max-width: 1500px; 
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* ---------------------------------------------------------------------- */
+/* --- CARROSSEL --- */
+/* ---------------------------------------------------------------------- */
+.carrossel-container {
+    position: relative;
+    overflow: hidden;
+    margin-top: 25px;
+    max-width: 1500px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carrossel-trilho {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 60px;
+    padding-bottom: 20px;
+}
+
+.carrossel-trilho::-webkit-scrollbar {
+    display: none;
+}
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff;
+    color: #333; 
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.carrossel-btn.esquerdo {
+    left: 20px;
+}
+
+.carrossel-btn.direito {
+    right: 20px;
+}
+
+.carrossel-btn:hover {
+    background: #f5f5f5;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Cards de Curso --- */
+.curso-card {
+    background: #ffffff;
+    flex-shrink: 0;
+    width: calc((100% - 40px) / 3);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.curso-card:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.curso-card .miniatura-ingles {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 12px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQhbBaXeQ-UYnLAw9aDDTYx5_ZVyCfPjxV-g&s'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.curso-card .miniatura-espanhol {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 12px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    background-image: url('https://www.ifmg.edu.br/portal/noticias/embaixada-da-espanha-promove-concurso-de-redacao/destaque-portal.jpg/@@images/be47ce37-d56d-4a9d-b659-f80b188daae8.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.curso-card h3 {
+    font-size: 19px;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.curso-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* ---------------------------------------------------------------------- */
+/* --- FÓRUM E SUPORTE (AREA-FORUM) --- */
+/* ---------------------------------------------------------------------- */
+.area-forum {
+    background-color: #f8f8f8;
+    padding: 30px 20px;
+    border-radius: 15px;
+    margin: 30px auto;
+    max-width: 1500px;
+    text-align: center;
+}
+
+.titulo-forum {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.subtitulo-forum {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.container-cards-forum {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card-forum {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    width: 300px;
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.card-forum:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-forum .titulo-card,
+.trilha-card .card-titulo-trilha {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.card-forum .descricao-card,
+.trilha-card .card-descricao-trilha {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* --- Botões de Ação (Fórum e Trilha) --- */
+.botao-card,
+.botao-trilha { 
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    width: auto; 
+    text-align: center;
+}
+.botao-trilha { 
+    display: block; 
+}
+
+
+.botao-primario {
+    background-color: #007bff;
+    color: white;
+}
+
+.botao-primario:hover {
+    background-color: #0056b3;
+}
+
+
+/* --- Últimos Posts --- */
+.secao-ultimos-posts {
+    max-width: 800px; 
+    margin: 20px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    text-align: left;
+}
+
+.titulo-ultimos-posts {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.lista-posts {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.item-post {
+    padding: 10px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+.item-post:last-child {
+    border-bottom: none;
+}
+
+.link-post {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.link-post:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.data-post {
+    font-size: 14px;
+    color: #888;
+    margin-left: 10px;
+}
+
+.link-todos-posts {
+    display: block;
+    text-align: center;
+    color: #666;
+    margin-top: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-todos-posts:hover {
+    color: #333;
+}
+
+
+.area-trilha-cursos {
+    padding: 40px 20px;
+    margin: 40px auto;
+    max-width: 1500px;
+}
+
+.trilha-container {
+    text-align: center;
+}
+
+.trilha-titulo {
+    color: #1a1a1a;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.trilha-subtitulo {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.trilha-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.trilha-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    width: 320px; 
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.trilha-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.trilha-card .card-descricao-trilha {
+    min-height: 50px; 
+}
+
+
+/* --- Feedback Recente --- */
+.feedback-recente {
+    max-width: 800px;
+    margin: 30px auto 0;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.feedback-titulo {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.feedback-card-detalhe {
+    background-color: #e6f7ff; 
+    border: 1px solid #b3e0ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.feedback-texto {
+    font-size: 16px;
+    color: #1a1a1a;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.feedback-data {
+    display: block;
+    font-size: 13px;
+    color: #4a4a4a;
+    font-weight: bold;
+}
+
