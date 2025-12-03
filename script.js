@@ -127,45 +127,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const btnLeitor = document.getElementById('btn-leitor-texto');
-    const iconeLeitura = document.getElementById('icone-leitura');
-    
-    const iconePlay = './img/icone-voz.svg'; 
-    const iconeStop = './img/icone-stop.svg';
-    
-    if ('speechSynthesis' in window && btnLeitor) {
-        
-        btnLeitor.addEventListener('click', () => {
-            if (window.speechSynthesis.speaking) {
-                window.speechSynthesis.cancel();
-                
-                iconeLeitura.src = iconePlay;
-                btnLeitor.title = 'Ativar Leitura de Conteúdo';
-                return;
-            }
 
-            
-            const conteudoPrincipal = document.querySelector('main').innerText;
-            
-            if (conteudoPrincipal) {
-                const utterance = new SpeechSynthesisUtterance(conteudoPrincipal);
-                utterance.lang = 'pt-BR'; 
-                utterance.rate = 1.0; 
-                window.speechSynthesis.speak(utterance);
-
-                iconeLeitura.src = iconeStop;
-                btnLeitor.title = 'Parar Leitura de Conteúdo';
-                
-                utterance.onend = () => {
-                    iconeLeitura.src = iconePlay;
-                    btnLeitor.title = 'Ativar Leitura de Conteúdo';
-                };
-            }
-        });
-
-    } else if (btnLeitor) {
-        btnLeitor.disabled = true;
-        btnLeitor.title = 'Seu navegador não suporta a função de leitura.';
-    }
-});

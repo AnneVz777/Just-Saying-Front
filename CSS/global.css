@@ -141,11 +141,6 @@ main {
   background-color: var(--cor-detalhe-media);
 }
 
-#btn-leitor-texto img {
-    width: 24px;
-    height: 24px;
-    filter: invert(100%); 
-}
 
 footer {
   background-color: #0b1957;

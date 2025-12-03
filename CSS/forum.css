@@ -21,7 +21,7 @@
 }
 
 .painel-canais {
-    flex: 0 0 250px; 
+    flex:0 0 250px; 
     background-color: var(--fundo-painel); 
     padding: 10px 0;
     color: var(--texto-escuro);
