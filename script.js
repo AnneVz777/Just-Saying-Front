@@ -44,6 +44,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('nav a');
+    const path = window.location.pathname; 
+
+    navLinks.forEach(link => {
+        if (link.href.includes(path) && path !== '/') {
+            link.classList.add('ativo-menu');
+        } else if (path === '/' && link.href.endsWith('index.html')) {
+            link.classList.add('ativo-menu');
+        }
+    });
+});
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const btnLeitor = document.getElementById('btn-leitor-texto');
     
