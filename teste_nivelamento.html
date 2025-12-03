@@ -5,31 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teste de Nivelamento</title>
     <link rel="stylesheet" href="./CSS/global.css" />
-    <link rel="stylesheet" href="./CSS/styles.css" />
+    <link rel="stylesheet" href="./CSS/teste_nivelamento.css" />
   </head>
   <body>
     <header>
-        <nav>
-            <ul>
-                <li><img src="./imagens/icones/home.png" alt="icone home"><a href="./index.html">Home</a></li>
-                <li><img src="./imagens/icones/book-bookmark.png" alt="icone atividades"><a href="./atividades.html">Atividades</a></li>
-                <li><img src="./imagens/icones/population-globe.png" alt="icone forum"><a href="./forum.html">Forúm</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./atividades.html">Atividades</a></li>
+          <li><a href="./forum.html">Forúm</a></li>
+        </ul>
+      </nav>
 
-        <div class="search-bar">
-            <input type="text" placeholder="Procurar...">
-            <img src="./imagens/icones/search.png" alt="icone busca">
-            <i class="fa fa-search"></i>
-        </div>
-</header>
+      <div class="search-bar">
+        <input type="text" placeholder="Procurar..." />
+        <img src="./imagens/icones/search.png" alt="icone busca" />
+        <i class="fa fa-search"></i>
+      </div>
+    </header>
 
     <main>
-      <section></section>
+      <section class="info-chave card-info">
+        <div class="info-item">
+          <i class="fas fa-clock"></i>
+          <span>Tempo Limite: <strong>60 Minutos</strong></span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-list-ol"></i>
+          <span>Total de Questões: <strong>30</strong></span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-user-check"></i>
+          <span>Avaliação: <strong>Automática</strong></span>
+        </div>
+      </section>
+
+      <section class="instrucoes-e-inicio card-info">
+        <h2>Instruções Importantes</h2>
+        <ul>
+          <li>
+            O teste tem duração de 60 minutos ininterruptos. Certifique-se de
+            ter tempo suficiente.
+          </li>
+          <li>Este teste não pode ser pausado após o início.</li>
+          <li>Leia atentamente cada enunciado antes de responder.</li>
+          <li>
+            Utilize o botão "Finalizar Teste" ao concluir todas as 30 questões.
+          </li>
+        </ul>
+
+        <p class="alerta-inicio">
+          Ao clicar em "Iniciar Teste", o tempo começará a ser contado.
+        </p>
+
+        <div class="botoes-acao">
+          <button class="botao-primario iniciar-teste">
+            <i class="fas fa-play-circle"></i> Iniciar Teste Agora
+          </button>
+        </div>
+      </section>
+
+      <section class="area-questoes">
+        <h2>Questão 1 de 30</h2>
+
+        <form class="card-questao">
+          <div class="enunciado-pergunta">
+            <p>
+              Which sentence correctly uses a modal verb to express future
+              possibility?
+            </p>
+          </div>
+
+          <div class="opcoes-resposta">
+            <div class="opcao-item">
+              <input type="radio" id="q1-a" name="resposta-q1" />
+              <label for="q1-a">She can go to the party next week.</label>
+            </div>
+            <div class="opcao-item">
+              <input type="radio" id="q1-b" name="resposta-q1" />
+              <label for="q1-b"
+                >It might rain tomorrow, so take an umbrella.</label
+              >
+            </div>
+            <div class="opcao-item">
+              <input type="radio" id="q1-c" name="resposta-q1" />
+              <label for="q1-c"
+                >They must study hard for the exam last night.</label
+              >
+            </div>
+            <div class="opcao-item">
+              <input type="radio" id="q1-d" name="resposta-q1" />
+              <label for="q1-d"
+                >We should to leave early if we want to catch the bus.</label
+              >
+            </div>
+          </div>
+
+          <div class="navegacao-teste">
+            <button type="button" class="botao-secundario">
+              <i class="fas fa-arrow-left"></i> Anterior
+            </button>
+            <button type="button" class="botao-primario">
+              Próxima <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="acessibilidade">
+        <button
+          id="btn-leitor-texto"
+          aria-label="Ativar leitor de tela"
+          title="Ativar Leitura de Conteúdo"
+        >
+          <i class="fas fa-volume-up"></i> Ler página
+        </button>
+      </section>
     </main>
 
     <footer>
-              <p>&copy; 2025 Just Saying. Todos os direitos reservados.</p>
+      <p>&copy; 2025 Just Saying. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>

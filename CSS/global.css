@@ -7,6 +7,11 @@
   --cor-detalhe-media: #d2b3db;
 }
 
+html, body {
+  height: 100%;
+  
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -31,7 +36,7 @@ ul li {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 60px;
+  gap: 40px;
   padding: 0;
   margin: 0;
 }
@@ -48,7 +53,7 @@ nav a:hover {
 }
 
 nav a.ativo-menu {
-  color: var(--cor-secundaria); 
+  color: var(--cor-secundaria);
   border-bottom: 2px solid var(--cor-secundaria);
   padding-bottom: 5px;
 }
@@ -122,6 +127,10 @@ main {
   align-items: center;
   gap: 8px;
   transition: background-color 0.2s;
+  position: fixed; 
+  bottom: 30px;    
+  right: 30px;     
+  z-index: 1000;
 }
 
 #btn-leitor-texto:hover {
@@ -132,12 +141,17 @@ main {
   background-color: var(--cor-detalhe-media);
 }
 
+#btn-leitor-texto img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%); 
+}
+
 footer {
   background-color: #0b1957;
   color: var(--cor-detalhe-clara);
   text-align: center;
   padding: 15px 30px;
-  position: relative;
   bottom: 0;
   width: 100%;
   margin-top: 40px;

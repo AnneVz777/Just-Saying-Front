@@ -1,0 +1,214 @@
+:root {
+    --cor-principal: #0B1957; 
+    --cor-secundaria: #426BC2; 
+    --fundo-base: #F7F4ED; 
+    --fundo-secundario: #E9F3FF; 
+    --cor-detalhe-clara: #E8D9ED; 
+    --cor-detalhe-media: #D2B3DB; 
+
+    --texto-forte: var(--cor-principal);
+    --texto-secundario: #444;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--fundo-base);
+    color: var(--texto-secundario);
+}
+
+.container-teste-aluno {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.cabecalho-teste {
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid var(--cor-detalhe-clara);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.cabecalho-teste h1 {
+    font-size: 1.8rem;
+    color: var(--cor-principal);
+    margin: 0;
+}
+
+.cabecalho-teste i {
+    font-size: 2rem;
+    color: var(--cor-secundaria);
+    margin-right: 15px;
+}
+
+.card-info {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+}
+
+.info-chave {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: var(--fundo-secundario);
+    border: 1px solid var(--cor-detalhe-clara);
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--cor-principal);
+    margin-bottom: 5px;
+}
+
+.info-item span {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+}
+
+.info-item strong {
+    color: var(--cor-secundaria);
+    font-size: 1.1rem;
+}
+
+.instrucoes-e-inicio h2 {
+    color: var(--cor-principal);
+    margin-top: 0;
+}
+
+.instrucoes-e-inicio ul {
+    color: var(--texto-secundario);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.alerta-inicio {
+    color: #cc0000; 
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.botoes-acao {
+    text-align: center;
+}
+
+.botao-primario {
+    background-color: var(--cor-secundaria);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.2s;
+}
+
+.botao-primario:hover {
+    background-color: var(--cor-principal);
+}
+
+.botao-primario i {
+    margin-right: 8px;
+}
+
+.area-questoes {
+    display: none; 
+}
+
+.area-questoes.iniciado {
+    display: block; 
+}
+
+
+.area-questoes h2 {
+    color: var(--cor-principal);
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--cor-secundaria);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.card-questao {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.enunciado-pergunta p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--texto-forte);
+    margin-bottom: 30px;
+    border-left: 5px solid var(--cor-secundaria);
+    padding-left: 15px;
+}
+
+.opcoes-resposta {
+    margin-bottom: 30px;
+}
+
+.opcao-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--fundo-base); 
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+    border: 1px solid var(--cor-detalhe-clara);
+}
+
+.opcao-item:hover {
+    background-color: var(--cor-detalhe-media); 
+}
+
+.opcao-item input[type="radio"] {
+    margin-right: 15px;
+    transform: scale(1.3);
+}
+
+.opcao-item label {
+    font-size: 1rem;
+    color: var(--texto-secundario);
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.navegacao-teste {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid var(--cor-detalhe-clara);
+}
+
+.botao-secundario {
+    background-color: var(--fundo-base);
+    color: var(--cor-secundaria);
+    border: 1px solid var(--cor-secundaria);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.botao-secundario:hover {
+    background-color: var(--fundo-secundario);
+}

@@ -98,3 +98,74 @@ document.addEventListener('DOMContentLoaded', () => {
         btnLeitor.title = 'Seu navegador não suporta a função de leitura.';
     }
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btnIniciar = document.querySelector('.iniciar-teste');
+    const secaoInstrucoes = document.querySelector('.instrucoes-e-inicio');
+    const secaoQuestoes = document.querySelector('.area-questoes');
+
+    if (!btnIniciar || !secaoInstrucoes || !secaoQuestoes) {
+        console.error("Erro: Um ou mais elementos essenciais para o teste não foram encontrados no HTML.");
+        return;
+    }
+
+    secaoQuestoes.style.display = 'none';
+
+    btnIniciar.addEventListener('click', (event) => {
+        event.preventDefault(); 
+
+        secaoInstrucoes.style.display = 'none';
+
+        secaoQuestoes.style.display = 'block';
+
+    });
+});
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btnLeitor = document.getElementById('btn-leitor-texto');
+    const iconeLeitura = document.getElementById('icone-leitura');
+    
+    const iconePlay = './img/icone-voz.svg'; 
+    const iconeStop = './img/icone-stop.svg';
+    
+    if ('speechSynthesis' in window && btnLeitor) {
+        
+        btnLeitor.addEventListener('click', () => {
+            if (window.speechSynthesis.speaking) {
+                window.speechSynthesis.cancel();
+                
+                iconeLeitura.src = iconePlay;
+                btnLeitor.title = 'Ativar Leitura de Conteúdo';
+                return;
+            }
+
+            
+            const conteudoPrincipal = document.querySelector('main').innerText;
+            
+            if (conteudoPrincipal) {
+                const utterance = new SpeechSynthesisUtterance(conteudoPrincipal);
+                utterance.lang = 'pt-BR'; 
+                utterance.rate = 1.0; 
+                window.speechSynthesis.speak(utterance);
+
+                iconeLeitura.src = iconeStop;
+                btnLeitor.title = 'Parar Leitura de Conteúdo';
+                
+                utterance.onend = () => {
+                    iconeLeitura.src = iconePlay;
+                    btnLeitor.title = 'Ativar Leitura de Conteúdo';
+                };
+            }
+        });
+
+    } else if (btnLeitor) {
+        btnLeitor.disabled = true;
+        btnLeitor.title = 'Seu navegador não suporta a função de leitura.';
+    }
+});
